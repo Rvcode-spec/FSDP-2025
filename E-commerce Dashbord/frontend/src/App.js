@@ -1,10 +1,11 @@
 
 import './App.css';
+import Nav from './Components/Nav';
 
 function App() {
   return (
     <div className="App">
-     <h1 className='text-4xl text-black font-bold'>hello</h1>
+     <Nav/>
     </div>
   );
 }
