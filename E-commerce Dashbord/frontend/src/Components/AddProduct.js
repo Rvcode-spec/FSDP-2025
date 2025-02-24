@@ -22,8 +22,9 @@ export default function AddProduct() {
         }
         const userId = JSON.parse(user)._id;
 
+
         try {
-            let result = await fetch("http://localhost:5000/add-product", {
+            let result = await fetch("http://localhost:5000/Add-Product", {
                 method: "POST",
                 body: JSON.stringify({ name, price, category, company, userId }),
                 headers: {
