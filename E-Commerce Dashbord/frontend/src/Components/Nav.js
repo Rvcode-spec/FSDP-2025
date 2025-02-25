@@ -24,7 +24,7 @@ export default function Nav() {
         {auth ? <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/products">Product</Link></li>
-          <li><Link to="/AddProduct">Add Product</Link></li>
+          <li><Link to="/add-product">Add Product</Link></li>
           <li><Link to="/update">Update Product</Link></li>
           <li><Link to="/profile">Profile</Link></li>
           <li><button onClick={logout}>Log Out ({user?.name})</button></li>
