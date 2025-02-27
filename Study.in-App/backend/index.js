@@ -11,6 +11,9 @@ app.use(cors());
 
 
 app.post('/SignUp', (req,resp)=>{
+    let user = new User(req.body);
+    console.log(user);
+    
     
 })
 
