@@ -1,17 +1,18 @@
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
-import Login from "./Components/Login";
-import SignUp from "./Components/SignUp";
+import Footer from "./Components/Footer";
+// import Login from "./Components/Login";
+// import SignUp from "./Components/SignUp";
 
 function App() {
   return (
     <div className="App">
      <Nav/>
      <Home/>
-     <Login/>
-     <SignUp/>
+     {/* <Login/>
+     <SignUp/> */}
 
-     
+     <Footer/>
     </div>
   );
 }
