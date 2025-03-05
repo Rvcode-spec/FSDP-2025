@@ -6,6 +6,15 @@
   text-transform: capitalize;
 }
 
+.App {
+  background-image: url('./assets/bg.jpg'); /* Path relative to the CSS file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+}
+
 /* Navbar styling */
 .navbar {
   height: 10vh;
@@ -24,11 +33,11 @@
   color: #fff;
   font-size: 2.5rem;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 7px;
   font-weight: 700;
   text-shadow: 1px 1px 2px black, 0 0 1em rgb(209, 237, 67),
     0 0 0.2em rgb(255, 247, 0);
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .navbar ul {
@@ -40,7 +49,7 @@
   display: flex;
   transform: none;
   padding: 10px;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .navbar li a {
@@ -51,6 +60,104 @@
 
 .nav-right {
   text-align: right;
+}
+
+.login{
+  display: block;
+  position: fixed;
+  width: 60%;
+  height: 350px;
+  min-width: 950px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  background-color:rgb(155, 33, 231);
+}
+
+.img-box{
+
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+}
+.img-box h1{
+  position: absolute;
+  top: 7%;
+  left: 20%;
+  font-size: 22px;
+  color: #084352;
+  text-align: center;
+}
+.img-box img{
+
+    width: 100%;
+    height: 100%;
+}
+
+.from-container{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 75.1%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  /* background-color: #1cc232; */
+  flex-direction: column;
+}
+
+form h3{
+  text-align: center; 
+  color: #111111;
+
+}
+
+form input {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  width: 70%;
+  height: 40px;
+  border-radius: 6px;
+  margin: 20px 0px 0px 60px;
+  padding: 0 7px;
+  border: none;
+  /* background-color: #33caf0; Only checking the box */
+  outline: none;
+  font-size: 18px;
+}
+
+form p {
+  color: #fff; /* Ensure text contrast is good */
+  margin-top: 10px;
+  text-align: center;
+}
+
+form a {
+  font-size: 18px;
+  color: #0f0f11;
+  margin: 5px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+form button {
+  width: 50%;
+  height: 45px;
+  outline: none;
+  border: none;
+  margin-left: 25%;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 15px;
+  background-color: rgb(167, 206, 28);
+  font-size: 18px;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
