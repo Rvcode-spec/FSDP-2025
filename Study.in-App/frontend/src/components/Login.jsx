@@ -21,7 +21,7 @@ export default function Login() {
 
         <p>
           Create an account if not yet please{' '}
-          <Link to = "/">Sign up</Link>
+          <Link to="/signup">Sign up</Link>
         </p>
         </form>
       </div>
