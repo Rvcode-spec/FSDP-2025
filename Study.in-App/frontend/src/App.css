@@ -1,27 +1,62 @@
-.App {
-  text-align: center;
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Merienda";
+  text-transform: capitalize;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar styling */
+.navbar {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(155, 33, 231);
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  padding: 10px;
+  align-items: center; /* Ensures proper vertical alignment */
+}
+
+/*logoName Styling */
+.logoName {
+  width: 300px;
+  height: auto;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(209, 237, 67),
+    0 0 0.2em rgb(255, 247, 0);
+    background-color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+ 
+}
+.navbar li {
+  display: flex;
+  transform: none;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+}
+
+.nav-right {
+  text-align: right;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
