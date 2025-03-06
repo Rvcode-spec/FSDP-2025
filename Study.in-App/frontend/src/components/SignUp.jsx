@@ -9,13 +9,16 @@ export default function SignUp() {
     const [password ,setPassword] =useState("");
     const navigate = useNavigate("");
 
+    const userData = {name,email,password}
+    console.log('sending the data', userData);
+    
+
     useEffect(()=>{
         const auth = localStorage.getItem('user')
         if (auth) {
             navigate('/')
         }
-        
-    })
+      },)
 
     const collectDate= async(e)=>{
         e.preventDefault();
@@ -29,11 +32,13 @@ export default function SignUp() {
             },
         });
 
-        // Parse the JSON response
-        result = await result.json // Correctly parse the JSON response
-        console.log(result); //login
+        result = await result.json //Corrected `.json()` call
+        console.log('Response from server:', result);
+        
+        // console.log(result); //login
         if (result) {
-            navigate('/')
+          localStorage.setItem('user', JSON.stringify(result)); // ✅ Store user data
+          navigate('/'); // ✅ Redirect to home page
         }
 
     }

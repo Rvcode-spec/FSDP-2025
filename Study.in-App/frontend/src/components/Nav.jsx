@@ -18,7 +18,7 @@ export default function Nav() {
       <li><Link to='/'>Home</Link></li>
       {auth ?<ul>
         <li><Link to='/'>test series</Link></li>
-        <li><Link to='/'>Ncert</Link></li>
+        <li><Link to='/ncert'>Ncert</Link></li>
         <li><Link to='/'>Gk & GS</Link></li>
         <li><Link to='/'>attempted-tests</Link></li>
         <li><Link to='/'>books</Link></li>
