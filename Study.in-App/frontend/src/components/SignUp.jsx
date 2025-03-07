@@ -9,39 +9,40 @@ export default function SignUp() {
     const [password ,setPassword] =useState("");
     const navigate = useNavigate("");
 
-    // const userData = {name,email,password}
-    // console.log('sending the data', userData);
-    
+       // Redirect user if already logged in
+    useEffect(() => {
+      const auth = localStorage.getItem('user');
+      if (auth) {
+          navigate('/');
+      }
+  }, [navigate]); // Add dependency array to avoid infinite re-renders
 
-    useEffect(()=>{
-        const auth = localStorage.getItem('user')
-        if (auth) {
-            navigate('/')
-        }
-      },)
+  const collectDate = async (e) => {
+      e.preventDefault();
+      console.log("Sending:", { name, email, password });// Debugging output
 
-    const collectDate= async(e)=>{
-        e.preventDefault();
-        console.log(name, email, password); // Check the Value 
+      try {
+          let response = await fetch('http://localhost:5000/SignUp/', {
+              method: 'POST',
+              body: JSON.stringify({ name, email, password }),
+              headers: { 'Content-Type': "application/json" },
+          });
 
-        let result = await fetch('http://localhost:5000/SignUp/',{
-            method: 'POST',
-            body: JSON.stringify({name,email,password}), // // Convert object to JSON string
-            headers:{
-                'Content-Type': "application/json", // Correct header to indicate JSON content
-            },
-        });
+          let result = await response.json(); // Fix incorrect `.json` call
+          console.log('Response from server:', result);
 
-        result = await result.json //Corrected `.json()` call
-        console.log('Response from server:', result);
-        
-        // console.log(result); //login
-        if (result) {
-          localStorage.setItem('user', JSON.stringify(result)); // ✅ Store user data
-          navigate('/'); // ✅ Redirect to home page
-        }
-
-    }
+          if (response.ok) { // Check if API request was successful
+              localStorage.setItem("user", JSON.stringify(result)); 
+              navigate("/");
+          } else {
+              alert(result.message || "Sign-up failed");
+          }
+      } catch (error) {
+          console.error("Error during sign-up:", error);
+          alert("Server error. Please try again.");
+      }
+  };
+   
   return (
     <div className='login'>
     <div className='img-box'>

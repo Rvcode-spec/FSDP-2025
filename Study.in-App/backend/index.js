@@ -28,10 +28,8 @@ app.post("/Login", async (req, resp) => {
         if (!user) {
             return resp.status(404).json({ message: "User not found" });
         }
-            console.log("user found",user);
-            
         resp.json({ 
-            user: { name: user.name,} 
+            user: { name: user.name} 
         });
     } catch (error) {
         resp.status(500).json({ message: "Internal server error", error });

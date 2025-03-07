@@ -21,21 +21,11 @@ export default function Nav() {
       </li>
       {auth ? (
         <ul>
-          <li>
-            <Link to="/">test series</Link>
-          </li>
-          <li>
-            <Link to="/ncert">Ncert</Link>
-          </li>
-          <li>
-            <Link to="/">Gk & GS</Link>
-          </li>
-          <li>
-            <Link to="/">attempted-tests</Link>
-          </li>
-          <li>
-            <Link to="/">books</Link>
-          </li>
+          <li><Link to="/testseries">test series</Link></li>
+          <li><Link to="/ncert">Ncert</Link></li>
+          <li><Link to="/gk">Gk & GS</Link></li>
+          <li><Link to="/attemptedtests">attempted-tests</Link></li>
+          <li><Link to="/books">books</Link></li>
           <button
             onClick={logout}
             style={{

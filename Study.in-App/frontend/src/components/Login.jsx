@@ -12,22 +12,27 @@ export default function Login() {
     if (auth) {
       navigate("/");
     }
-  });
+  },[navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    let result = await fetch("http://localhost:5000/Login/", {
+    console.log("sending", email, password);
+    
+    let result = await fetch("http://localhost:5000/Login/", ({
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
         "Content-Type": "application/json",
       },
-    });
+    }));
     result = await result.json();
-    if (result) {
-      localStorage.setItem("user", JSON.stringify(result)); // Save user data
+    console.log('Response from server:', result);
+    if (result.user) {
+      localStorage.setItem("user", JSON.stringify(result.user)); // Save user data
       navigate("/"); // Home page par le jane ka code
       console.log("date send");
+    } else {
+      alert(result.message || "Login failed");
     }
   };
 
