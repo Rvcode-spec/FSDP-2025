@@ -17,13 +17,28 @@ app.post("/SignUp", async (req,resp)=>{
 })
 
 
-app.post("/Login", async (req,resp)=>{
+app.post("/Login", async (req, resp) => {
+    try {
+        console.log("Login Request", req.body);
+        
         let user = await User.findOne({
-            email:req.body.email,
-            password:req.body.password
-        })
-        resp.send(user)
-})
+            email: req.body.email,
+            password: req.body.password
+        });
+        if (!user) {
+            return resp.status(404).json({ message: "User not found" });
+        }
+            console.log("user found",user);
+            
+        resp.json({ 
+            user: { name: user.name,} 
+        });
+    } catch (error) {
+        resp.status(500).json({ message: "Internal server error", error });
+    }
+});
+
+
 
 app.listen(port, ()=>{
     console.log("App Successfully Runing Port 5000");

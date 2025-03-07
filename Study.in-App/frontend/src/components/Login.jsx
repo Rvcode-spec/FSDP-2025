@@ -25,7 +25,7 @@ export default function Login() {
     });
     result = await result.json();
     if (result) {
-      localStorage.setItem("user", JSON.stringify(result.user)); // Save user data
+      localStorage.setItem("user", JSON.stringify(result)); // Save user data
       navigate("/"); // Home page par le jane ka code
       console.log("date send");
     }

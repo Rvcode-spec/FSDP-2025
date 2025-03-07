@@ -9,8 +9,8 @@ export default function SignUp() {
     const [password ,setPassword] =useState("");
     const navigate = useNavigate("");
 
-    const userData = {name,email,password}
-    console.log('sending the data', userData);
+    // const userData = {name,email,password}
+    // console.log('sending the data', userData);
     
 
     useEffect(()=>{
