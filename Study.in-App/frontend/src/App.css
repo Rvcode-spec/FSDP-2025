@@ -161,6 +161,57 @@ form button {
   
 }
 
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #e7dfee;
+  padding: 20px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Change to fixed if you want it always at the bottom */
+  bottom: 0;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    position: relative;
+    margin-right: 10%;
+    background-color: #1eb4da;
+}
+
+.main h1 {
+  color: #333;
+  font-size: 25px;
+}
+
+.footer-left-box {
+  display: flex;
+  width: 55%;
+  text-align: right; /* Ensures text aligns properly */
+  background-color: #084352;
+  padding: 10px; /* Add padding for better spacing */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
