@@ -10,6 +10,8 @@ const Footer = () => {
       </div>
           <div className='footer-left-box'>
               <h3>Company</h3>
+              <i class="fa-solid fa-phone"></i>
+              <i class="fa-brands fa-instagram"></i>
               <ul>
                 <li><Link to="/about">About us</Link></li>
                 <li><Link to ='/contact'>Contact Us</Link></li>
