@@ -21,7 +21,7 @@ const Footer = () => {
                 <li><a href="mailto:info@example.com">Email us</a></li>
                 <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">Talk to A Counselor</a></li>
               </ul>
-          </div><br/><br/>
+          </div><br/>
         
         <h5>Study.inCorporation © 2025</h5>
     </div>
