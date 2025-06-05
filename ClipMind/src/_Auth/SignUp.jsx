@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function SignUp() {
+export default function SignUp({onSwitch}) {
 
   const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
@@ -44,10 +44,10 @@ export default function SignUp() {
         <img src="\src\assets\web-img.svg" className='w-200 ' alt="img" />
       </div>
 
-  <div className='right px-2 py-2 p-8 flex flex-col items-center justify-center w-1/3 bg-white shadow-2xl shadow-blue-600  rounded-xl  py-5'>
+  <div className='right my-8 px-2 py-2 p-8 flex flex-col items-center justify-center w-1/3 bg-white shadow-2xl shadow-blue-600  rounded-xl  py-5'>
 
         <h1 className='text-2xl font-bold  mb-4  underline-offset-4  text-orange-400'>Sign-Up</h1>
-
+        
         <input type="text" 
           value={email}
           onChange={(e)=>setEmail(e.target.value)}
@@ -67,7 +67,16 @@ export default function SignUp() {
     </button>
               <span class="text-center cursor-pointer  text-gray-700 hover:underline py-2">Forgotten password?</span>
               <div className='w-full items-center justify-center text-center flex hover:underline '>
-              <p className='m-1 text-purple-800 hover:font-bold'>Already have an account</p><span className='  text-black font-bold'>Login</span>
+          
+       <p className='mt-4 text-sm text-gray-600'>
+          Already have an account?
+          <span onClick={onSwitch} className='text-black font-bold ml-1 cursor-pointer hover:underline'>
+            Login
+          </span>
+        </p>
+
+
+
               </div>
               
               
