@@ -1,4 +1,5 @@
 import './App.css'
+import Header from './component/Navbar/header'
 
 function App() {
   
@@ -6,7 +7,7 @@ function App() {
   return (
   
       <>
-      <h1 className='bg-amber-500'>hello</h1>
+    <Header/>
       
       </>
   )
