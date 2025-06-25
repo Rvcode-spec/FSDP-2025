@@ -33,14 +33,7 @@ export default function SignUp({onSwitch}) {
       console.error("Error during signup:", error);
     }
   };
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> 5fd68faf (Codesarthi Backend Work)
-  
   return (
     <div className='flex w-full mx-auto h-screen items-center justify-center'>
       <div className='left w-1/2 flex'>
@@ -77,16 +70,9 @@ export default function SignUp({onSwitch}) {
             Login
           </span>
         </p>
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 5fd68faf (Codesarthi Backend Work)
-              </div>
-              
               
       </div>
+    </div>
     </div>
   )
 }

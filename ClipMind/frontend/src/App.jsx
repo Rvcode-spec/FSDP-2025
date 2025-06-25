@@ -1,11 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 import './App.css'
-import SignUp from './_Auth/SignUp'
-<<<<<<< HEAD
-import HomePage from './Comp/Home'
-=======
-import HomePage from './Compoments/Home'
->>>>>>> 5fd68faf (Codesarthi Backend Work)
+import Home from './Compoments/Home'
+
 
 function App() {
 
@@ -13,7 +9,7 @@ function App() {
   return (
     <div>
         <BrowserRouter>
-          <HomePage/>
+          <Home/>
 
         </BrowserRouter>
     </div>
@@ -26,4 +22,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
