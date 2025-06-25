@@ -1,9 +1,4 @@
 import React from 'react'
-
-
-
-
-
 const listings = [
   {
     img: 'https://source.unsplash.com/400x300/?maldives',
