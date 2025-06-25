@@ -20,8 +20,8 @@ server.get('/',(req,resp)=>{
 })
 
 
-server.get('/api/test', (req, res) => {
-  res.send('Test route working!');
+server.get('/api/test', (req, resp) => {
+  resp.send('Test route working!');
 });
 // register 
 
