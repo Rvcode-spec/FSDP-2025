@@ -19,6 +19,10 @@ server.get('/',(req,resp)=>{
     resp.send("Hello")
 })
 
+
+server.get('/api/test', (req, res) => {
+  res.send('Test route working!');
+});
 // register 
 
 server.post('/register', async (req,resp)=>{
