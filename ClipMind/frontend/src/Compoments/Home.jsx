@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import SignUp from '../_Auth/SignUp';
 import LoginPage from '../_Auth/Login';
 
