@@ -1,5 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
+import LoginForm from './components/Home';
+import BackendStatus from './components/BackendStatus';
 
 
 function App() {
@@ -16,10 +18,8 @@ function App() {
 
   return (
     <>
-      <div className='text-2xl text-center '>
-      <h1>hello</h1>
-      
-    </div>
+      <LoginForm/>
+      <BackendStatus/>
     </>
   );
 }
