@@ -17,6 +17,10 @@ const server = express();
 // Middleware
 server.use(express.json())
 
+server.get('/',(req,resp)=>{
+    resp.send("hell Ravi")
+})
+
 
 
 server.post('/register', async (req, resp)=>{
