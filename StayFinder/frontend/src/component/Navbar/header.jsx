@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { Search } from 'lucide-react'; 
 import logo from '../../assets/logo.png';
 import Home from '../page/Home';
-import Login from '../_Auth/login';     // 🔁 Capital L to match component
+import Login from '../_Auth/login';     
 import Register from '../_Auth/Register';
 
 export default function Header() {
-  const [formType, setFormType] = useState(""); // 'login' | 'register' | ''
+  const [formType, setFormType] = useState("");  // 'login' | 'register' | ''
 
   return (
     <>
