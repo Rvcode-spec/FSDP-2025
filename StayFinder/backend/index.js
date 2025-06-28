@@ -7,11 +7,17 @@ dotenv.config();
 
 const server = express();
 server.use(cors());
+  
 server.use(express.json());
 
 // Connect to MongoDB
 database();
 
+
+
+server.get("/", (req, resp) => {
+  resp.send("✅ Backend is connected properly!");
+});
 // Routes
 
 server.use('/api/auth', require('./routes/auth'));
@@ -19,7 +25,7 @@ server.use('/api/listing', require('./routes/listings'));
 server.use('/api/booking',require('./routes/bookings'))
 
 
-const port = process.env.PORT || 6000;
+const port = process.env.PORT;
 server.listen(port, ()=>{
     console.log("Server Start");
     

@@ -2,11 +2,14 @@ const mongoose = require('mongoose');
 
 const listingSchema = new mongoose.Schema({
 
-  title: String,
+  name: String,
   description: String,
   location: String,
   price: Number,
-  images: [String],
+   images: {
+    type: [String],
+    default: []
+  },
    host: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 },  { timestamps: true });
 
