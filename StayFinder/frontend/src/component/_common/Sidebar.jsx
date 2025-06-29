@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-import { LogOut, Search, Heart, Calendar, User, MessageCircle, Settings, X,} from 'lucide-react';
+import { LogOut, Search, Heart, Calendar, User, MessageCircle, Settings, X, } from 'lucide-react';
 import { useNavigate } from 'react-router';
 import logo from '../../assets/logo.png'
 

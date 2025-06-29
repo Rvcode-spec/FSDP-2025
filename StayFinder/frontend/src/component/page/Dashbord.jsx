@@ -1,157 +1,77 @@
-import { Profiler, useState,  } from 'react';
+import { useState } from 'react';
+import { Bell, Menu, User } from 'lucide-react'; // Make sure lucide-react is installed
 import Sidebar from '../_common/Sidebar';
 import UserProfile from '../_common/UserProfile';
-
 
 export default function UserDashboard() {
   const [activeTab, setActiveTab] = useState('discover');
   
- const [user, setUser] = useState('');
- const [favorites, setFavorites] = useState([]);
-
-
-  const toggleFavorite = (propertyId) => {
-    setFavorites(prev => prev.filter(fav => fav.id !== propertyId));
-  };
-
-
-  
-
-  const renderDiscover = () => (
-    <div className="space-y-6">
-      {/* Welcome Section */}
-      <div className="bg-gradient-to-r from-[#FF385C] to-[#E31E3A] text-white p-6 rounded-lg">
-        <h2 className="text-2xl font-bold mb-2">Welcome back, {user.name}!</h2>
-        <p className="opacity-90">Ready for your next adventure? Discover amazing places to stay.</p>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-          <Plane className="h-8 w-8 text-[#FF385C] mx-auto mb-2" />
-          <p className="text-2xl font-bold">{user.tripCount}</p>
-          <p className="text-sm text-gray-600">Trips Completed</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-          <Star className="h-8 w-8 text-[#FF385C] mx-auto mb-2" />
-          <p className="text-2xl font-bold">{user.reviewCount}</p>
-          <p className="text-sm text-gray-600">Reviews Written</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-          <Award className="h-8 w-8 text-[#FF385C] mx-auto mb-2" />
-          <p className="text-2xl font-bold">Gold</p>
-          <p className="text-sm text-gray-600">Member Status</p>
-        </div>
-      </div>
-
-      {/* Search Bar */}
-      <div className="bg-white p-4 rounded-lg shadow-sm border">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="flex-1">
-            <div className="relative">
-              <Search className="h-4 w-4 absolute left-3 top-3 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Where do you want to go?"
-                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
-              />
-            </div>
-          </div>
-          <input
-            type="date"
-            className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
-          />
-          <input
-            type="date"
-            className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]"
-          />
-          <select className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C]">
-            <option>1 Guest</option>
-            <option>2 Guests</option>
-            <option>3 Guests</option>
-            <option>4+ Guests</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  );
-
-  const renderFavorites = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold">My Wishlist</h2>
-      
-      {favorites.length === 0 ? (
-        <div className="text-center py-12">
-          <Heart className="h-12 w-12 text-gray-300 mx-auto mb-4" />
-          <p className="text-gray-500">No favorites yet. Start exploring to add some!</p>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {favorites.map((property) => (
-            <div key={property.id} className="bg-white rounded-lg shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-              <div className="relative">
-                <img 
-                  src={property.image} 
-                  alt={property.name}
-                  className="w-full h-48 object-cover"
-                />
-                <button 
-                  onClick={() => toggleFavorite(property.id)}
-                  className="absolute top-3 right-3 p-2 bg-white rounded-full shadow-sm hover:bg-gray-50"
-                >
-                  <Heart className="h-4 w-4 text-red-500 fill-red-500" />
-                </button>
-              </div>
-              <div className="p-4">
-                <h4 className="font-semibold text-lg mb-1">{property.name}</h4>
-                <p className="text-sm text-gray-600 flex items-center gap-1 mb-2">
-                  <MapPin className="h-3 w-3" />
-                  {property.location}
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="font-bold text-[#FF385C]">₹{property.price}/night</p>
-                  <div className="flex items-center gap-1 text-sm">
-                    <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                    {property.rating}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-
- 
+   // testing 
+  const [user] = useState({
+    name : "Ravi",
+    avatar: '',
+    
+  });
 
   const renderContent = () => {
     switch (activeTab) {
       case 'discover':
-        return renderDiscover();
+        return <div>Discover Page</div>;
       case 'trips':
-        return renderTrips();
+        return <div>Trips Page</div>;
       case 'favorites':
-        return renderFavorites();
+        return <div>Favorites Page</div>;
       case 'profile':
-         return <UserProfile user={user} />;
+        return <UserProfile user={user} />;
       case 'messages':
         return <div className="text-center py-12 text-gray-500">Messages coming soon...</div>;
       case 'settings':
         return <div className="text-center py-12 text-gray-500">Settings coming soon...</div>;
       default:
-        return renderDiscover();
+        return <div>Discover Page</div>;
     }
   };
 
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Sidebar */}
-      <Sidebar/>
-      <UserProfile/>
-      
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      
+      {/* Main Area */}
+      <div className="flex-1 flex flex-col">
+        {/* Top Bar */}
+        <div className="bg-white shadow-sm border-b h-16 flex items-center justify-between px-6">
+          <button onClick={() => {}} className="lg:hidden">
+            <Menu className="h-6 w-6" />
+          </button>
+
+          <div className="flex items-center gap-4">
+            <button className="relative p-2 text-gray-600 hover:text-gray-900">
+              <Bell className="h-5 w-5" />
+              <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 text-white rounded-full text-xs flex items-center justify-center">2</span>
+            </button>
+
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-[#FF385C] rounded-full flex items-center justify-center">
+                {user.avatar ? (
+                  <img src={user.avatar} alt={user.name} className="w-8 h-8 rounded-full object-cover" />
+                ) : (
+                  <User className="h-4 w-4 text-white" />
+                )}
+              </div>
+              <div className="hidden sm:block">
+                <p className="text-sm font-medium">{user.name}</p>
+                <p className="text-xs text-gray-500">Traveler</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="p-6 overflow-y-auto flex-1">
+          {renderContent()}
+        </div>
+      </div>
     </div>
   );
 }
