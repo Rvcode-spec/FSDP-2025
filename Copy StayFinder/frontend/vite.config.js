@@ -12,7 +12,7 @@ port: 5173,
   server: {
     proxy:{
       '/api':{
-         target: 'https://stayfinder-backend-or9t.onrender.com',
+         target: 'http://localhost:5050',
           changeOrigin: true,
           secure: false,
       }

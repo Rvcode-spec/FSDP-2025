@@ -11,18 +11,18 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const testBackendConnection = async () => {
-      try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/`);
-        const data = await res.text();
-        console.log("🟢 Response from backend:", data);
-      } catch (err) {
-        console.error("🔴 Error fetching backend:", err);
-      }
-    };
+  const testBackendConnection = async () => {
+    try {
+      const res = await fetch("https://stayfinder-backend-or9t.onrender.com/api/test");
+      const data = await res.text();
+      console.log("🟢 Response from backend:", data);
+    } catch (err) {
+      console.error("🔴 Error fetching backend:", err);
+    }
+  };
 
-    testBackendConnection();
-  }, []);
+  testBackendConnection();
+}, []);
 
   // Check if current path is /dashboard
   const isDashboardPage = location.pathname === "/dashboard";
