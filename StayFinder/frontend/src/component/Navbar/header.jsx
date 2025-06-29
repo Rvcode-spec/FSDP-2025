@@ -8,13 +8,14 @@ import DateSelector from '../_common/DateSelector';
 import GuestSelector from '../_common/GuestSelector';
 
 // Location Dropdown Component
-function LocationDropdown({ location, onSelect }) {
+function LocationDropdown({ location, onSelect, isTyping }) {
   const popularLocations = [
     'Mumbai', 'Delhi', 'Goa', 'Bangalore', 'Jaipur', 
     'Kerala', 'Manali', 'Udaipur', 'Shimla', 'Rishikesh'
   ];
 
-  const filteredLocations = location 
+  // Show filtered results only when user is actively typing
+  const filteredLocations = (isTyping && location.length > 0) 
     ? popularLocations.filter(loc => 
         loc.toLowerCase().includes(location.toLowerCase())
       ) 
@@ -23,7 +24,7 @@ function LocationDropdown({ location, onSelect }) {
   return (
     <div className="absolute top-12 left-0 bg-white shadow-lg border rounded-lg w-64 p-3 text-sm z-50 max-h-60 overflow-y-auto">
       <div className="text-xs text-gray-500 mb-2 font-medium">
-        {location ? 'Search Results' : 'Popular Destinations'}
+        {(isTyping && location.length > 0) ? 'Search Results' : 'Popular Destinations'}
       </div>
       {filteredLocations.length > 0 ? (
         filteredLocations.map((loc, index) => (
@@ -52,11 +53,11 @@ export default function Header() {
   const [checkIn, setCheckIn] = useState(null);
   const [checkOut, setCheckOut] = useState(null);
   const [guests, setGuests] = useState({ adults: 1, children: 0, rooms: 1 });
+  const [isTyping, setIsTyping] = useState(false);
 
   // Control which section is active: 'location' | 'calendar' | 'guests' | null
   const [activeInput, setActiveInput] = useState(null);
 
-  // Option 1: Navigate to separate pages
   const handleLoginClick = () => {
     navigate('/login');
   };
@@ -65,30 +66,43 @@ export default function Header() {
     navigate('/register');
   };
 
+  const handleLocationSelect = (selectedLocation) => {
+    setLocation(selectedLocation);
+    setActiveInput(null);
+    setIsTyping(false); // Reset typing state after selection
+  };
+
+  const handleLocationInputChange = (e) => {
+    setLocation(e.target.value);
+    setIsTyping(true); // User is actively typing
+  };
+
+  const handleLocationClick = () => {
+    setIsTyping(false); // User clicked on input, show all locations
+    setActiveInput(activeInput === 'location' ? null : 'location');
+  };
+
   const handleSearch = () => {
-    // Create search filters object
+    if (!location.trim()) {
+      alert('Please select a location first!');
+      return;
+    }
+
     const searchFilters = {
-      checkIn: checkIn ? checkIn.toISOString() : null,
-      checkOut: checkOut ? checkOut.toISOString() : null,
-      adults: guests.adults,
-      children: guests.children,
-      rooms: guests.rooms,
+      location,
+      checkIn,
+      checkOut,
+      ...guests,
     };
 
-    // Navigate to home page with search parameters
+    console.log('Searching with query:', searchFilters);
+
+    // Navigate to home page with search state
     navigate('/', {
       state: {
-        selectedLocation: location || null, // Pass location even if empty
+        selectedLocation: location,
         searchFilters: searchFilters
       }
-    });
-
-    // Close any open dropdowns
-    setActiveInput(null);
-    
-    console.log('Search initiated:', {
-      location,
-      searchFilters
     });
   };
 
@@ -105,22 +119,20 @@ export default function Header() {
           {/* Location */}
           <div
             className="relative px-3 cursor-pointer"
-            onClick={() => setActiveInput(activeInput === 'location' ? null : 'location')}
+            onClick={handleLocationClick}
           >
             <input
               type="text"
-              placeholder="Kahan jana hai?"
+              placeholder="Search"
               value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              onChange={handleLocationInputChange}
               className="w-[140px] text-sm font-medium placeholder-gray-600 outline-none cursor-pointer"
             />
             {activeInput === 'location' && (
               <LocationDropdown 
                 location={location}
-                onSelect={(loc) => {
-                  setLocation(loc);
-                  setActiveInput(null);
-                }}
+                onSelect={handleLocationSelect}
+                isTyping={isTyping}
               />
             )}
           </div>
@@ -179,16 +191,16 @@ export default function Header() {
           <div className="flex gap-2">
             <input
               type="text"
-              placeholder="Search destination..."
+              placeholder="Kahan jana hai?"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               className="flex-1 border rounded-full px-4 py-2 text-sm shadow focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
             <button
               onClick={handleSearch}
-              className="bg-[#FF385C] p-2 rounded-full hover:bg-[#E31E3A] transition-colors"
+              className="bg-[#FF385C] px-4 py-2 rounded-full text-white text-sm hover:bg-[#E31E3A] transition-colors"
             >
-              <Search className="text-white h-4 w-4" />
+              Search
             </button>
           </div>
         </div>

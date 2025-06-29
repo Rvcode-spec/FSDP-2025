@@ -22,8 +22,8 @@ export default function RegisterPage() {
     setError('');
 
     try {
-      // Replace with your actual API endpoint
-      const response = await fetch('/api/auth/register', {
+      // Registration API call
+      const response = await fetch('http://localhost:5050/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,14 +32,17 @@ export default function RegisterPage() {
       });
 
       if (!response.ok) {
-        throw new Error('Login failed');
+        throw new Error('Registration failed');
       }
 
       const data = await response.json();
-      console.log('Login successful:', data);
+      console.log('Registration successful:', data);
       
-      // Handle successful login (redirect, store token, etc.)
-      // window.location.href = '/dashboard';
+      // Store token if provided
+      if (data.token) {
+        localStorage.setItem('authToken', data.token);
+      }
+      
       
     } catch (err) {
       setError(err.message || 'Something went wrong');
@@ -53,10 +56,10 @@ export default function RegisterPage() {
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Welcome Back
+            Create Your Account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            Please sign in to your account
+            Please fill in your details to register
           </p>
         </div>
         
@@ -119,21 +122,21 @@ export default function RegisterPage() {
 
           <div>
             <button
-              type="button"
+              type="submit"
               onClick={handleSubmit}
               disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-md font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Signing in...' : 'Sign in'}
+              {loading ? 'Creating Account...' : 'Create Account'}
             </button>
           </div>
 
           <div className="text-center">
             <p className="text-sm text-gray-600">
-              Don't have an account?{' '}
-              <button className="font-medium text-indigo-600 hover:text-indigo-500 underline">
-                Sign up here
-              </button>
+              Already have an account?{' '}
+              <a href="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
+                Sign in here
+              </a>
             </p>
           </div>
         </div>

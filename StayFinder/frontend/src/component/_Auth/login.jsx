@@ -21,8 +21,8 @@ export default function LoginPage() {
     setError('');
 
     try {
-      // Replace with your actual API endpoint
-      const response = await fetch('/api/auth/login', {
+      // Login API call
+      const response = await fetch('http://localhost:5050/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,8 +37,11 @@ export default function LoginPage() {
       const data = await response.json();
       console.log('Login successful:', data);
       
-      // Handle successful login (redirect, store token, etc.)
-      // window.location.href = '/dashboard';
+      // Store token if provided
+      if (data.token) {
+        localStorage.setItem('authToken', data.token);
+      }
+      
       
     } catch (err) {
       setError(err.message || 'Something went wrong');
@@ -94,6 +97,26 @@ export default function LoginPage() {
             </div>
           </div>
 
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <input
+                id="remember-me"
+                name="remember-me"
+                type="checkbox"
+                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+              />
+              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+                Remember me
+              </label>
+            </div>
+
+            <div className="text-sm">
+              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                Forgot your password?
+              </a>
+            </div>
+          </div>
+
           {error && (
             <div className="text-red-600 text-sm text-center bg-red-50 p-3 rounded-md">
               {error}
@@ -102,23 +125,16 @@ export default function LoginPage() {
 
           <div>
             <button
-              type="button"
+              type="submit"
               onClick={handleSubmit}
               disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-md font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Signing in...' : 'Sign in'}
+              {loading ? 'Signing in...' : 'log In'}
             </button>
           </div>
 
-          <div className="text-center">
-            <p className="text-sm text-gray-600">
-              Don't have an account?{' '}
-              <button className="font-medium text-indigo-600 hover:text-indigo-500 underline">
-                Sign up here
-                </button>
-            </p>
-          </div>
+         
         </div>
       </div>
     </div>

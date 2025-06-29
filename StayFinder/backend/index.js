@@ -18,6 +18,8 @@ database();
 server.get("/", (req, resp) => {
   resp.send("✅ Backend is connected properly!");
 });
+
+
 // Routes
 
 server.use('/api/auth', require('./routes/auth'));
