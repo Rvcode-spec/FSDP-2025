@@ -1,1 +1,0 @@
-    <p className='m-1 text-purple-800 hover:font-bold'>Already have an account</p><span className='  text-black font-bold'><Link to="/LoginPage">Login</Link></span>
