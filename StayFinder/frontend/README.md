@@ -1,1 +1,0 @@
-seed run :-node seed/seed.js 
