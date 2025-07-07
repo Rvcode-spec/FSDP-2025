@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken')
 const asyncHandler = require('../utils/asyncHandler')
 
 
@@ -23,13 +24,22 @@ exports.register = asyncHandler(async(req, resp, next)=>{
     await user.save();
     resp.status(201).json({message: 'User Register Successful'});
 
-    if(!user){
-        const error = new Error("User not found");
-        error.statusCode = 404;
-    }
-
-
-    resp.json(user)
-
-
 });
+
+exports.login = asyncHandler(async(req,resp,next)=>{
+
+    const {email, password} = req.body;
+
+    const user = await User.findOne({email});
+    if(!user) return resp.status(400).json({message:" Invalid Email"});
+
+    const authuser = await bcrypt.compare(password, user.password);
+    if (!authuser) return resp.status(401).send("Incorrect password");
+
+    const token = jwt.sign({id:user._id}, process.env.JWT_SECRET);
+
+   resp.status(200).json({
+            message: "Login Successful",
+            token: token,
+    }); 
+})

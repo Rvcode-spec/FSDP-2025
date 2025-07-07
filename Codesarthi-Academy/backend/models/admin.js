@@ -4,7 +4,7 @@ const AdminSchema = new mongoose.Schema({
     name: String,
     email: String,
     password:{type:String, unique:true},
-    phono: String,
+    mobileNo: String,
 
 })
 
