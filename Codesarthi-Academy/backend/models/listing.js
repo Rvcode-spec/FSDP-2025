@@ -1,17 +1,49 @@
+// const mongoose = require('mongoose');
+
+// const ListingSchema = new mongoose.Schema({
+//   title: {
+//     type: String,
+//     required: true,
+//   },
+//   price: {
+//     type: Number,
+//     required: true,
+//   },
+//   image: {
+//     type: [String], // Array of image URLs (e.g., from Cloudinary)
+//     required: true,
+//   },
+//   description: {
+//     type: String,
+//   },
+//   createdAt: {
+//     type: Date,
+//     default: Date.now,
+//   },
+// });
+
+// module.exports = mongoose.model('Listing', ListingSchema);
+
+
+
+
+
 const mongoose = require('mongoose');
 
-
-const ListingSchema = new mongoose.Schema({
-
-    tital : String,
-    price : Number,
-    image : [String],
-    description: String,
-
-    createdAt: {
-    type: Date,
-    default: Date.now,
+const listingSchema = new mongoose.Schema({
+  
+name: {
+    type: String,
+    required: true
   },
-})
+  price: {
+    type: Number,
+    required: true
+  },
+  image: {
+    type: String,
+    required: true
+  }
+});
 
-module.exports = mongoose.model('listings', ListingSchema);
+module.exports = mongoose.model('Listing', listingSchema);

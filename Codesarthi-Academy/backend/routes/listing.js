@@ -1,13 +1,11 @@
 const express = require('express');
-const upload = require('../middleware/upload');
-const { getListing, getListingById, createListing } = require('../controllers/listingControllers')
+const {createListing} = require('../controllers/imageControllers')
+const upload = require('../middleware/multer')
 const router = express.Router();
 
-router.get('/', getListing);
-router.get('/:id', getListingById);
+ router.post('/upload', upload.single('image'), createListing)
+
+ module.exports = router;
 
 
 
-router.post('/create',  upload.array('images'), createListing);
-
-module.exports = router;
