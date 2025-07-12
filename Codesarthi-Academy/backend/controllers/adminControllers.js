@@ -39,8 +39,6 @@ exports.login = asyncHandler(async (req, resp, next) => {
 
       
     const admin = await Admin.findOne({ email });
-    if (!admin) resp.status(400).json({ message: "Invalid Email" });
-
     if (!admin) {
         resp.status(400);
         throw new Error("Invalid Email");

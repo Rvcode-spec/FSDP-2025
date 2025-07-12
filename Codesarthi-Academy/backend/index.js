@@ -2,7 +2,8 @@ const express = require('express');
 const connectDB = require('./config/connectDB');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const errorHandler = require('./middleware/errorHandler')
+const errorHandler = require('./middleware/errorHandler');
+const bodyParser = require('body-parser');
 
 
 dotenv.config(); // Load the .env file variables
@@ -12,10 +13,12 @@ const server = express();
 server.use(express.json());
 server.use(errorHandler)
 server.use(cors());
+server.use(bodyParser.json());
+server.use(express.static('public'));
 
 
 // Application Testing  API
-server.get('/api/test', (req, resp) => {
+server.get('/CodeSarthi-Acadmey/test', (req, resp) => {
     resp.send("Welcome To CodeSarthi Academy");
 //    console.log(req.body);
    
@@ -23,20 +26,21 @@ server.get('/api/test', (req, resp) => {
 
 
 //Routes User
-server.use('/api/auth/user', require('./routes/authuser'));
+server.use('/CodeSarthi-Acadmey/auth/user', require('./routes/authuser'));
 server.use('/api/auth/user', require('./routes/authuser'));
 
 // Routes Admin
-server.use('/api/auth/admin', require('./routes/authadmin'));
-server.use('/api/auth/admin', require('./routes/authadmin'));
+server.use('/CodeSarthi-Acadmey/auth/admin', require('./routes/authadmin'));
+server.use('/CodeSarthi-Acadmey/auth/admin', require('./routes/authadmin'));
 
 
-// Routes Listing
+// Routes course
 
-server.use('/api/listing', require('./routes/listing'));
+server.use('/CodeSarthi-Acadmey/course', require('./routes/course'));
 
+// Router Payment 
 
-
+server.use('/CodeSarthi-Acadmey', require('./routes/payment'));
 
 
 

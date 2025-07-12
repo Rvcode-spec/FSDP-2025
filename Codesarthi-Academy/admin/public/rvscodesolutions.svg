@@ -1,0 +1,7 @@
+
+<svg width="400" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" rx="20" ry="20" fill="#0e0e0e"/>
+  <text x="30" y="65" font-family="Verdana" font-size="40" font-weight="bold" fill="#a855f7">RVS</text>
+  <text x="150" y="65" font-family="Verdana" font-size="40" fill="#cccccc">&lt;/&gt;</text>
+  <text x="30" y="105" font-family="Verdana" font-size="28" fill="#cccccc">codesolutions</text>
+</svg>
