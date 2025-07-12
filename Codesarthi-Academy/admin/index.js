@@ -11,7 +11,7 @@ server.use(cors());
 server.use(express.json());
 
 server.get('/', (res, resp)=>{
-    resp.send('Welcome to RSVcode')
+    resp.send('Welcome to RSVcodesolutions')
 })
 
 

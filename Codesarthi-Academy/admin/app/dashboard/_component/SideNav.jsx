@@ -1,9 +1,11 @@
 "use client"
 
 import React from 'react'
-import {PanelsTopLeft, BookAIcon, Info, CircleUser} from 'lucide-react'
+import {PanelsTopLeft, BookAIcon, Info, CircleUser, Video, Notebook} from 'lucide-react'
 import Link from 'next/link'
 import {usePathname} from 'next/navigation'
+import { Button } from '@radix-ui/themes'
+
 
 export default function SideNav() {
   const path = usePathname()
@@ -12,12 +14,16 @@ export default function SideNav() {
 
         { id: 1, name: 'Dashboard', path: '/dashboard', icon: PanelsTopLeft },
         { id: 2, name: 'Course', path: '/dashboard/course', icon: BookAIcon },
-        { id: 3, name: 'About', path: '/upgrade', icon: Info },
-        { id: 4, name: 'Client', path: '/account', icon: CircleUser }
+        { id: 3, name: 'About', path: '/about', icon: Info },
+        { id: 4, name: 'Client', path: '/client', icon: CircleUser },
+        { id: 5, name: 'Live Class', path: '/live', icon: Video },
+        { id: 6, name: 'Notebook', path: '/notebook', icon: Notebook },
+
+        
   ]
 
   return (
- <div className="w-64 h-screen shadow-md p-5">
+ <div className="w-64 sm:h-screen sm:shadow-md p-5">
       <div className="grid gap-3">
         {MenuOption.map((item, index) => (
           <Link href={item.path} key={index}>
@@ -35,7 +41,10 @@ export default function SideNav() {
           </Link>
         ))}
       </div>
+
     </div>
+
+    
 
   )
 }
