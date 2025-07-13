@@ -1,13 +1,13 @@
 const express = require('express');
 const next = require('next');
-require('./config/db')
 const dotenv = require('dotenv');
 const cors = require('cors');
+require('./config/db'); // ✅ Your DB config
 
 dotenv.config();
 
-const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
+const dev = process.env.NODE_ENV !== 'production'; // ✅ Define dev first
+const app = next({ dev });                         // ✅ Then use it
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
@@ -16,22 +16,22 @@ app.prepare().then(() => {
   server.use(cors());
   server.use(express.json());
 
-  // ✅ Load backend API routes correctly
-  server.use('/api/auth', require('./routers/auth'));
+  // ✅ Your backend APIs
+//   server.use('/api/auth', require('./routers/auth'));
   server.use('/courses', require('./routers/course'));
 
-  // Test route
+  // ✅ Test API
   server.get('/api', (req, res) => {
     res.send('✅ Backend API working');
   });
 
-  // ✅ Next.js frontend pages
-//   server.all('*', (req, res) => {
-//     return handle(req, res);
-//   });
+  // ✅ Next.js frontend route handling
+  server.all('*', (req, res) => {
+    return handle(req, res);
+  });
 
   const PORT = process.env.PORT || 3000;
   server.listen(PORT, () => {
-    console.log("Start");
+    console.log(`🚀 Server started on http://localhost:${PORT}`);
   });
 });
