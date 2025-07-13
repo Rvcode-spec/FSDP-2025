@@ -1,31 +1,37 @@
 const express = require('express');
-require('./config/db');
-const dotenv = require('dotenv')
-dotenv.config();
-
+const next = require('next');
+require('./config/db')
+const dotenv = require('dotenv');
 const cors = require('cors');
 
-const server = express();
+dotenv.config();
 
-server.use(cors());
-server.use(express.json());
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-server.get('/', (res, resp)=>{
-    resp.send('Welcome to RSVcodesolutions')
-})
+app.prepare().then(() => {
+  const server = express();
 
+  server.use(cors());
+  server.use(express.json());
 
-server.use('/api/auth', require('./routers/auth'));
+  // ✅ Load backend API routes correctly
+  server.use('/api/auth', require('./routers/auth'));
+  server.use('/courses', require('./routers/course'));
 
-server.use('/courses', require('./routers/course'));
+  // Test route
+  server.get('/api', (req, res) => {
+    res.send('✅ Backend API working');
+  });
 
+  // ✅ Next.js frontend pages
+//   server.all('*', (req, res) => {
+//     return handle(req, res);
+//   });
 
-
-server.listen(5050, ()=>{
-    console.log("Server Start");
-    
-})
-
-
-
-
+  const PORT = process.env.PORT || 3000;
+  server.listen(PORT, () => {
+    console.log("Start");
+  });
+});
