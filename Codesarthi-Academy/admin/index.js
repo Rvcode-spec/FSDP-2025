@@ -15,7 +15,9 @@ server.get('/', (res, resp)=>{
 })
 
 
-server.use('/api/auth', require('./routers/auth'))
+server.use('/api/auth', require('./routers/auth'));
+
+server.use('/courses', require('./routers/course'));
 
 
 

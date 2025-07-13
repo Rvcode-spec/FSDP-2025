@@ -23,28 +23,25 @@ export default function SideNav() {
   ]
 
   return (
- <div className="w-64 sm:h-screen sm:shadow-md p-5">
-      <div className="grid gap-3">
-        {MenuOption.map((item, index) => (
-          <Link href={item.path} key={index}>
-            <div
-              className={`flex items-center gap-7 p-5 
-                          rounded-md cursor-pointer 
-                          bg-purple-100 
-                          hover:bg-purple-600 hover:text-white
-                          transition-colors duration-200
-                          ${path === item.path ? 'bg-purple-600 text-white' : ''}`}
-            >
-              <item.icon />
-              <h2>{item.name}</h2>
-            </div>
-          </Link>
-        ))}
-      </div>
-
-    </div>
-
-    
+ <div className="w-full md:w-74 md::h-screen shadow-lg p-3 md:p-9">
+  <div className="grid gap-2 md:gap-3 w-52  ">
+    {MenuOption.map((item, index) => (
+      <Link href={item.path} key={index}>
+        <div
+          className={`flex items-center text-2xl gap-3 md:gap-7 p-3 md:p-5
+                       rounded-md cursor-pointer
+                       bg-purple-100
+                       hover:bg-purple-600 hover:text-white
+                       transition-colors duration-200
+                       ${path === item.path ? 'bg-purple-600 text-white' : ''}`}
+        >
+          <item.icon className="w-5 h-5 md:w-6 md:h-6" />
+          <h2 className="text-sm md:text-base">{item.name}</h2>
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
 
   )
 }
