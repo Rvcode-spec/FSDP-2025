@@ -29,13 +29,7 @@ server.get('/CodeSarthi-Acadmey/test', (req, resp) => {
 server.use('/CodeSarthi-Acadmey/auth/user', require('./routes/authuser'));
 server.use('/api/auth/user', require('./routes/authuser'));
 
-// Routes Admin
-server.use('/CodeSarthi-Acadmey/auth/admin', require('./routes/authadmin'));
-server.use('/CodeSarthi-Acadmey/auth/admin', require('./routes/authadmin'));
-
-
 // Routes course
-
 server.use('/CodeSarthi-Acadmey/course', require('./routes/course'));
 
 // Router Payment 

@@ -1,4 +1,4 @@
-const Admin = require('../models/admin');
+const Admin = require('../module/admin')
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 const asyncHandler = require('../utils/asyncHandler');
