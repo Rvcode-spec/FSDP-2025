@@ -34,10 +34,7 @@ exports.register = asyncHandler(async (req, resp, next) => {
 exports.login = asyncHandler(async (req, resp, next) => {
       
     const { email, password } = req.body;
-    console.log(req.body);
-    
-
-      
+    // console.log(req.body);
     const admin = await Admin.findOne({ email });
     if (!admin) {
         resp.status(400);

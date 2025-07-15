@@ -4,8 +4,7 @@ const AdminSchema = new mongoose.Schema({
     name: String,
     email: String,
     password:{type:String, unique:true},
-    mobileNo: String,
-
+    mobileNo: Number,
 })
 
 module.exports = mongoose.model('Admins', AdminSchema)
