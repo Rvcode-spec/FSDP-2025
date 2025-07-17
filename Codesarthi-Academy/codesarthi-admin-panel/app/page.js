@@ -54,8 +54,6 @@ export default function Home() {
   }
 };
 
-
-
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
