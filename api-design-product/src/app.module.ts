@@ -2,10 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { Users } from './users/user.entity';
-import * as dotenv from 'dotenv';
-dotenv.config();
-
-// console.log('DB_PASSWORD TYPE:', typeof process.env.DB_PASSWORD);
+console.log('DB_PASSWORD TYPE:', typeof process.env.DB_PASSWORD);
 
 @Module({
   imports: [
