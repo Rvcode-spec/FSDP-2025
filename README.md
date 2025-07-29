@@ -1,7 +1,6 @@
-# 📦 Project
-
-A cross-technology full-stack development project using:  
+# 📦 Projects
 ![Languages](https://img.shields.io/badge/code-MultiLanguage-blue)
+A cross-technology backend development project using Node.js, NestJS, PHP, C++, and Java — designed to provide scalable and modular backend architecture, compatible with any frontend like React.js or Next.js.
 
 ---
 
@@ -11,6 +10,7 @@ A cross-technology full-stack development project using:
 - [📝 Features](#-features)
 - [👨‍💻 Author](#-author)
 - [📜 License](#-license)
+- [🧠 Project List](#-project-list)
 
 ---
 
@@ -39,11 +39,22 @@ A cross-technology full-stack development project using:
 
 ---
 
+
+##  🧠 Project List
+
+|  # | 🗂 Project Name                | 🔧 Description                       | 🕒 Last Updated |
+| -: | ------------------------------ | ------------------------------------ | --------------- |
+|  1 | **Codesarthi-Academy**         | API for product & course management  | 2 weeks ago     |
+|  2 | **EmailService Mock API**      | Mock Gmail-like email sending system | 2 weeks ago     |
+|  3 | **StayFinder**                 | .env-based setup for stay finder app | 28 days ago     |
+|  4 | **Hospital Management System** | RESTful backend for hospital system  | last week       |
+
+
 ## 👨‍💻 Author
 
 **Ravi Shankar Singh**  
 `Full-stack Developer` | Node.js | PHP | React.js | Next.js | C++ | Java | NestJS  
-🔗 [LinkedIn](https://www.linkedin.com) | 🌐 [Portfolio](https://your-portfolio-link.com) *(Replace with your actual links)*
+🔗 [LinkedIn](www.linkedin.com/in/ravishankarsinghsde) | 🌐 [Portfolio](https://your-portfolio-link.com) *(Replace with your actual links)*
 
 ---
 
