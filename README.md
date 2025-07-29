@@ -32,10 +32,10 @@ A cross-technology full-stack development project using:
 ## 📝 Features
 
 - ![Auth](https://img.shields.io/badge/Auth-Enabled-brightgreen) **User Authentication**
--📦![API](https://img.shields.io/badge/API-khaki)**REST APIs & GraphQL (if applicable)**
-- 📊 **Dashboard & UI components**
-- ⚙️ **Cross-platform backend services**
-- 💬 **Real-time support (Sockets, Polling)**
+- ![API](https://img.shields.io/badge/API-REST%20%26%20GraphQL-khaki) **REST APIs & GraphQL (if applicable)**
+- ![Dashboard](https://img.shields.io/badge/UI-Dashboard%20Components-blueviolet) **Dashboard & UI components**
+- ![Cross Platform](https://img.shields.io/badge/Backend-CrossPlatform-informational) **Cross-platform backend services**
+- ![Realtime](https://img.shields.io/badge/Realtime-Sockets%20%26%20Polling-critical) **Real-time support (Sockets, Polling)**
 
 ---
 
@@ -43,15 +43,14 @@ A cross-technology full-stack development project using:
 
 **Ravi Shankar Singh**  
 `Full-stack Developer` | Node.js | PHP | React.js | Next.js | C++ | Java | NestJS  
-🔗 [LinkedIn](https://www.linkedin.com) | 🌐 [Portfolio](https://your-portfolio-link.com) *(Add your real links)*
+🔗 [LinkedIn](https://www.linkedin.com) | 🌐 [Portfolio](https://your-portfolio-link.com) *(Replace with your actual links)*
 
 ---
 
 ## 📜 License
 
 ![License](https://img.shields.io/badge/License-MIT-yellow)  
-This project is licensed under the **MIT License**.
-
+This project is licensed under the **MIT License**.  
 ![Status](https://img.shields.io/badge/Maintained-Yes-success)
 
 ---
