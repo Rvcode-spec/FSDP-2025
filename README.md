@@ -1,6 +1,6 @@
 # 📦 Projects
 ![Languages](https://img.shields.io/badge/code-MultiLanguage-blue)
-A cross-technology backend development project using Node.js, NestJS, PHP, C++, and Java — designed to provide scalable and modular backend architecture, compatible with any frontend like React.js or Next.js.
+**A cross-technology backend development project using Node.js, NestJS, PHP, C++, and Java — designed to provide scalable and modular backend architecture, compatible with any frontend like React.js or Next.js.**
 
 ---
 
@@ -46,9 +46,9 @@ A cross-technology backend development project using Node.js, NestJS, PHP, C++, 
 
 |  # | 🗂 Project Name                | 🔧 Description                            | 🕒 Last Updated | 🧑‍💻 Language/Stack        |
 | -: | ------------------------------ | ----------------------------------------- | --------------- | ------------------------- |
-|  1 | **Codesarthi-Academy**         | API for product & course management       | 2 weeks ago     | Node.js, Next.js|
+|  1 | **CodeYaan (Codesarthi-Academy)**         | API for product & course management       | 2 weeks ago     | Node.js, Next.js|
 |  2 | **EmailService Mock API**      | Mock Gmail-like email sending system      | 2 weeks ago     | NestJs |
-|  3 | **StayFinder**                 | .env-based setup for stay finder app      | 28 days ago     | Node.js,MongoDB, React.js+vite.js  |
+|  3 | **StayFinder**                 | Airbnb-inspired full-stack app for property bookings.    | 28 days ago     | Node.js,MongoDB, React.js+vite.js  |
 |  4 | **Hospital Management System** | RESTful backend for hospital system       | last week       | NestJS PostgreSQL |
 
 
@@ -58,8 +58,7 @@ A cross-technology backend development project using Node.js, NestJS, PHP, C++, 
 
 **Ravi Shankar Singh**  
 `Full-stack Developer` | Node.js | PHP | React.js | Next.js | C++ | Java | NestJS  
-🔗 [LinkedIn](www.linkedin.com/in/ravishankarsinghsde) | 🌐 [Portfolio](https://your-portfolio-link.com) *(Replace with your actual links)*
-
+🔗 [LinkedIn](www.linkedin.com/in/ravishankarsinghsde) | 🌐 [Portfolio](https://your-portfolio-link.com)
 ---
 
 ## 📜 License
