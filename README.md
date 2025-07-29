@@ -42,12 +42,16 @@ A cross-technology backend development project using Node.js, NestJS, PHP, C++, 
 
 ##  🧠 Project List
 
-|  # | 🗂 Project Name                | 🔧 Description                       | 🕒 Last Updated |
-| -: | ------------------------------ | ------------------------------------ | --------------- |
-|  1 | **Codesarthi-Academy**         | API for product & course management  | 2 weeks ago     |
-|  2 | **EmailService Mock API**      | Mock Gmail-like email sending system | 2 weeks ago     |
-|  3 | **StayFinder**                 | .env-based setup for stay finder app | 28 days ago     |
-|  4 | **Hospital Management System** | RESTful backend for hospital system  | last week       |
+## 📦 Backend Project Portfolio — `Rvcodes-spec`
+
+|  # | 🗂 Project Name                | 🔧 Description                            | 🕒 Last Updated | 🧑‍💻 Language/Stack        |
+| -: | ------------------------------ | ----------------------------------------- | --------------- | ------------------------- |
+|  1 | **Codesarthi-Academy**         | API for product & course management       | 2 weeks ago     | Node.js, Next.js|
+|  2 | **EmailService Mock API**      | Mock Gmail-like email sending system      | 2 weeks ago     | NestJs |
+|  3 | **StayFinder**                 | .env-based setup for stay finder app      | 28 days ago     | Node.js,MongoDB, React.js+vite.js  |
+|  4 | **Hospital Management System** | RESTful backend for hospital system       | last week       | NestJS PostgreSQL |
+
+
 
 
 ## 👨‍💻 Author
