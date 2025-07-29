@@ -32,7 +32,7 @@ A cross-technology full-stack development project using:
 ## 📝 Features
 
 - ![Auth](https://img.shields.io/badge/Auth-Enabled-brightgreen) **User Authentication**
-- 📦 **REST APIs & GraphQL (if applicable)**
+-📦![API](https://img.shields.io/badge/API-khaki)**REST APIs & GraphQL (if applicable)**
 - 📊 **Dashboard & UI components**
 - ⚙️ **Cross-platform backend services**
 - 💬 **Real-time support (Sockets, Polling)**
