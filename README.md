@@ -58,7 +58,7 @@
 
 **Ravi Shankar Singh**  
 `Full-stack Developer` | Node.js | PHP | React.js | Next.js | C++ | Java | NestJS  
-🔗 [LinkedIn](www.linkedin.com/in/ravishankarsinghsde) | 🌐 [Portfolio](https://your-portfolio-link.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/ravishankarsinghsde)| 🌐 [Portfolio](https://your-portfolio-link.com)
 ---
 
 ## 📜 License
