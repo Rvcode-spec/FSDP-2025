@@ -19,13 +19,13 @@ A powerful and responsive **Admin Panel** built using **Next.js** (Frontend) and
 
 ## 📌 Features
 
-- ![Auth](https://img.shields.io/badge/Auth-Enabled-brightgreen) **✅ Admin Authentication (Login/Logout)**
-- 📚 Course Management (Add, Update, Delete)
+- ![Auth](https://img.shields.io/badge/Auth-brightgreen) **✅ Admin Authentication (Login/Logout)**
+- ![](https://img.shields.io/badge/Course-green%20) **📚 Course Management (Add, Update, Delete)**
 - ![Student](https://img.shields.io/badge/Student-blue%20) **👨‍🎓 Student & Instructor Management**
-- 🧾 Enrollment Tracking & Reports
-- 📊 Dashboard with Stats & Graphs
-- 📩 Contact Queries & Feedback Section
-- 🔐 Secure APIs using JWT & Sessions
+- ![Enrollment](https://img.shields.io/badge/Enrollment-cyan%20) **🧾 Enrollment Tracking & Reports**
+- ![Dashboard](https://img.shields.io/badge/Dashboard-magenta%20) ** 📊 Dashboard with Stats & Graphs**
+- ![Contact Queries ](https://img.shields.io/badge/Contact-Queries-violet%20) **📩 Contact Queries & Feedback Section**
+- ![API](https://img.shields.io/badge/API-REST%20%26%20GraphQL-khaki) **🔐 Secure APIs using JWT & Sessions**
 
 ---
 
