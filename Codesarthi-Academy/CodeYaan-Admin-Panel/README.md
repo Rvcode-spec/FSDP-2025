@@ -3,20 +3,8 @@ A powerful and responsive **Admin Panel** built using **Next.js** (Frontend) and
 
 ---
 
-## 📌 Features
 
-- ✅ Admin Authentication (Login/Logout)
-- 📚 Course Management (Add, Update, Delete)
-- 👨‍🎓 Student & Instructor Management
-- 🧾 Enrollment Tracking & Reports
-- 📊 Dashboard with Stats & Graphs
-- 📩 Contact Queries & Feedback Section
-- 🔐 Secure APIs using JWT & Sessions
-
----
-
-## 🛠️ Tech Stack
-
+## 📑 Table of Contents
 | Area        | Technology         |
 |-------------|--------------------|
 | Frontend    | Next.js 14+        |
@@ -24,7 +12,27 @@ A powerful and responsive **Admin Panel** built using **Next.js** (Frontend) and
 | Database    | MongoDB (Mongoose) |
 | Auth        | JWT / Cookies      |
 | Styling     | Tailwind CSS       |
-| Charts      | Recharts / Chart.js|
-| Deployment  | Vercel / Render    |
+| Charts      | Non                |
+| Deployment  | Non                |
 
 ---
+
+## 📌 Features
+
+- ![Auth](https://img.shields.io/badge/Auth-Enabled-brightgreen) **✅ Admin Authentication (Login/Logout)**
+- 📚 Course Management (Add, Update, Delete)
+- ![Student](https://img.shields.io/badge/Student-blue%20) **👨‍🎓 Student & Instructor Management**
+- 🧾 Enrollment Tracking & Reports
+- 📊 Dashboard with Stats & Graphs
+- 📩 Contact Queries & Feedback Section
+- 🔐 Secure APIs using JWT & Sessions
+
+---
+
+## 💻 Tech Stack
+### 🔙 Backend:
+![Node.js](https://img.shields.io/badge/Backend-Node.js-brightgreen)
+
+### 🌐 Frontend:
+![Next.js](https://img.shields.io/badge/Frontend-Next.js-black)
+
