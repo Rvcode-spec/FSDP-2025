@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { DoctorsService } from './doctors.service';
 import { Doctor } from './entities/doctor.entity';
 import { Slot } from '../slots/entities/slot.entity';
-import { DoctorsController } from './doctors.controller'
+import { DoctorsController } from './doctors.controller';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Doctor, Slot])],

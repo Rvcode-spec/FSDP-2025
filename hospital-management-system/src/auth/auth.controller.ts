@@ -50,6 +50,7 @@ export class AuthController {
   getpatientProfile(@Req() req) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
     const userId = req.user.id;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     return this.patientService.getpatientProfile(userId);
   }
 
@@ -58,11 +59,7 @@ export class AuthController {
   getdoctorProfile(@Req() req) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
     const userId = req.user.id;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     return this.doctorService.getdoctorProfile(userId);
-  }
-
-  @Get('doctor')
-  getAllDoctor() {
-    return this.doctorService.findAll();
   }
 }

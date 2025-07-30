@@ -17,7 +17,7 @@ export class SlotsService {
 
   async create(createSlotDto: CreateSlotDto): Promise<Slot> {
     const doctor = await this.doctorRepository.findOne({
-      where: { id: 'uuid-string-here' },
+      where: { id: createSlotDto.doctorId },
     });
 
     if (!doctor) {
@@ -25,9 +25,10 @@ export class SlotsService {
     }
 
     const slot = this.slotRepository.create({
+      date: createSlotDto.date,
       startTime: createSlotDto.startTime,
       endTime: createSlotDto.endTime,
-      doctor: doctor, // use fetched doctor object directly
+      doctor,
       isAvailable: true,
     });
 
@@ -38,11 +39,11 @@ export class SlotsService {
     return this.slotRepository.find({ relations: ['doctor'] });
   }
 
-  async findAvailableSlotsByDoctor(doctorId: number): Promise<Slot[]> {
+  async findAvailableSlotsByDoctor(doctorId: string): Promise<Slot[]> {
     return this.slotRepository.find({
       where: {
         doctor: {
-          id: doctorId.toString(), // ✅ convert number to string
+          id: doctorId,
         },
         isAvailable: true,
       },
@@ -50,7 +51,7 @@ export class SlotsService {
     });
   }
 
-  async markUnavailable(slotId: number) {
+  async markUnavailable(slotId: string) {
     const slot = await this.slotRepository.findOne({ where: { id: slotId } });
     if (!slot) throw new NotFoundException('Slot not found');
     slot.isAvailable = false;

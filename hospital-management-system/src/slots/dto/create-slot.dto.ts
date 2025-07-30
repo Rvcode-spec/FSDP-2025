@@ -1,12 +1,18 @@
-import { IsDateString, IsUUID } from 'class-validator';
+import { IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateSlotDto {
-  @IsDateString()
+  @IsNotEmpty()
+  @IsString()
+  date: string;
+
+  @IsNotEmpty()
+  @IsString()
   startTime: string;
 
-  @IsDateString()
+  @IsNotEmpty()
+  @IsString()
   endTime: string;
 
-  @IsUUID()
+  @IsNotEmpty()
   doctorId: string;
 }

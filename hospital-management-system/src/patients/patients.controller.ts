@@ -1,14 +1,14 @@
-import { Controller, Post, Body, Get } from '@nestjs/common';
+import { Controller, Get, Body, Patch, Param } from '@nestjs/common';
 import { PatientsService } from './patients.service';
-import { RegisterPatinetDto } from '../auth/dto/register.patient';
+import { UpdatePatientDto } from './dto/update-patient.dto';
 
 @Controller('patients')
 export class PatientsController {
   constructor(private patientsService: PatientsService) {}
 
-  @Post('register')
-  register(@Body() dto: RegisterPatinetDto) {
-    return this.patientsService.register(dto);
+  @Patch(':id')
+  updateDoctor(@Param('id') id: string, @Body() dto: UpdatePatientDto) {
+    return this.patientsService.update(id, dto);
   }
 
   @Get()

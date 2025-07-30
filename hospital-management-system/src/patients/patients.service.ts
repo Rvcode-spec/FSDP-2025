@@ -1,8 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Patient } from './entities/patient.entity';
 import { RegisterPatinetDto } from '../auth/dto/register.patient';
+import { UpdatePatientDto } from './dto/update-patient.dto';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
@@ -23,7 +24,7 @@ export class PatientsService {
     return this.patientRepo.save(newPatient);
   }
 
-  async getpatientProfile(userId: number) {
+  async getpatientProfile(userId: string) {
     return this.patientRepo.findOne({
       where: { id: userId },
       select: {
@@ -38,6 +39,13 @@ export class PatientsService {
 
   async findByEmail(email: string): Promise<Patient | null> {
     return this.patientRepo.findOne({ where: { email } });
+  }
+
+  async update(id: string, dto: UpdatePatientDto) {
+    const patient = await this.patientRepo.findOne({ where: { id } });
+    if (!patient) throw new NotFoundException('patient not found');
+    Object.assign(patient, dto);
+    return this.patientRepo.save(patient);
   }
 
   async findAll(): Promise<Patient[]> {

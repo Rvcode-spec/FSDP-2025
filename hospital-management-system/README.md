@@ -1,8 +1,8 @@
-Schedula - Healthcare Appointment Backend
+Schedula - Update on Healthcare Appointment Backend
 
-Hello,
-A few routes are still pending. I’m currently working on them and will make sure everything is completed by tonight.
-Thank you for your patience.
+Most of the backend routes are completed and everything is functioning as expected. A few routes related to Slots and Appointments, especially for elastic scheduling, are still pending. I’ll be integrating those updates tomorrow morning.
+
+Thank you for your continued patience and support. I’m committed to ensuring everything is finalized and stable by tonight.
 
 Tech Stack
 
@@ -17,15 +17,52 @@ Tech Stack
 
 Folder Structure
 src/
-|-- auth/ # Authentication (JWT, login)
-|-- doctors/ # Doctor CRUD and availability
-|-- patients/ # Patient profile management
-|-- slots/ # Slot creation and scheduling
-|-- appointments/ # Book and manage appointments
-|-- config/ # Environment & TypeORM config
-|-- main.ts # Application entry point
-|-- app.module.ts Root application module
+├── main.ts
+├── app.module.ts
+├── config/
+│   └── config.module.ts
+├── common/
+│   ├── guards/roles.guard.ts
+│   └── decorators/roles.decorator.ts
+├── auth/
+│   ├── auth.controller.ts
+│   ├── auth.service.ts
+│   ├── auth.module.ts
+│   ├── jwt.strategy.ts
+│   ├── dto/
+│   │   ├── login.dto.ts
+│   │   ├── register-doctor.dto.ts
+│       └── register-patient.dto.ts
+│   
+├── doctors/
+│   ├── doctors.controller.ts
+│   ├── doctors.service.ts
+│   ├── doctors.module.ts
+│   ├── entities/doctor.entity.ts
+│   └── dto/update-doctor.dto.ts
+├── patients/
+│   ├── patients.controller.ts
+│   ├── patients.service.ts
+│   ├── patients.module.ts
+│   ├── entities/patient.entity.ts
+│   └── dto/update-patient.dto.ts
+├── slots/
+│   ├── slots.controller.ts
+│   ├── slots.service.ts
+│   ├── slots.module.ts
+│   ├── entities/slot.entity.ts
+│   └── dto/create-slot.dto.ts
+├── appointments/
+│   ├── appointments.controller.ts
+│   ├── appointments.service.ts
+│   ├── appointments.module.ts
+│   ├── entities/appointment.entity.ts
+│   └── dto/book-appointment.dto.ts
 
+.env
+package.json
+tsconfig.json
+README.md  
 ---
 
 Environment Variables
@@ -63,23 +100,35 @@ npm run start:dev
 
 ---
 
-Auth
-POST /auth/login
+AuthController {/api/auth}
+
+{/api/auth/login, POST}
+{/api/auth/register/doctor, POST}
+{/api/auth/register/patient, POST}
+{/api/auth/patient/logout, POST}
+{/api/auth/doctor/logout, POST}
+{/api/auth/patient, GET} +65ms
+{/api/auth/patient/profile, GET}
+{/api/auth/doctor/profile, GET}
+
+---------------------------------------------------------------------
 Doctors
-POST /doctors/register
-GET /doctors
-PATCH /doctors/:id
-Patients
-POST /patients/register
-GET /patients/:id
+{/api/patients/:id, PATCH}
+{/api/patients, GET}
+--------------------------------------------------------------
+
 Slots
-POST /slots/create
-GET /slots/doctor/:doctorId
+{/api/slots, POST}
+{/api/slots, GET}
+{/api/slots/doctor/:id, GET}
+{/api/slots/:id/unavailable, PATCH}
 
 Appointments
-
-POST /appointments/book
-GET /appointments/patient/:patientId
+{/api/appointments/book, POST}
+{/api/appointments/patient/:id, GET}
+{/api/appointments, GET}
+{/api/appointments/cancel/:id, PATCH}  
+{/api/appointments/reschedule/:id, PATCH}
 
 ---
 
@@ -88,3 +137,5 @@ Dev Tools
 - TypeORM CLI
 - Postman
 - pgAdmin
+
+

@@ -7,10 +7,10 @@ A powerful and responsive **Admin Panel** built using **Next.js** (Frontend) and
 ## 📑 Table of Contents
 | Area        | Technology         |
 |-------------|--------------------|
-| Frontend    | Next.js 14+        |
+| Frontend    | Next.js            |
 | Backend     | Node.js, Express   |
 | Database    | MongoDB (Mongoose) |
-| Auth        | JWT / Cookies      |
+| Auth        | JWT /bcrypt        |
 | Styling     | Tailwind CSS       |
 | Charts      | Non                |
 | Deployment  | Non                |

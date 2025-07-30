@@ -2,34 +2,53 @@ import {
   Injectable,
   NotFoundException,
   InternalServerErrorException,
+  BadRequestException,
 } from '@nestjs/common';
 
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Appointment } from './entities/appointment.entity';
 import { BookAppointmentDto } from './dto/book-appointment.dto';
+import { Slot } from 'src/slots/entities/slot.entity';
 
 @Injectable()
 export class AppointmentsService {
   constructor(
     @InjectRepository(Appointment)
     private readonly appointmentRepo: Repository<Appointment>,
+
+    @InjectRepository(Slot)
+    private slotRepo: Repository<Slot>,
   ) {}
 
   async bookAppointment(dto: BookAppointmentDto): Promise<Appointment> {
-    try {
-      const appointment = this.appointmentRepo.create({
-        patientId: dto.patientId,
-        slotId: dto.slotId,
-        status: 'BOOKED',
-      });
-      return await this.appointmentRepo.save(appointment);
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        throw new InternalServerErrorException(error.message);
-      }
-      throw new InternalServerErrorException('Failed to book appointment');
+    const slot = await this.slotRepo.findOne({
+      where: { id: dto.slotId },
+      relations: ['doctor'],
+    });
+
+    if (!slot) throw new NotFoundException('Slot not found');
+
+    // 🧠 Count how many patients already booked this slot
+    const bookingsCount = await this.appointmentRepo.count({
+      where: { slot: { id: slot.id }, status: 'BOOKED' },
+    });
+
+    const limit = slot.doctor.maxBookingsPerSlot;
+
+    if (bookingsCount >= limit) {
+      throw new BadRequestException(
+        `Slot already booked (${bookingsCount}/${limit})`,
+      );
     }
+
+    const appointment = this.appointmentRepo.create({
+      slot,
+      patient: { id: dto.patientId },
+      status: 'BOOKED',
+    });
+
+    return this.appointmentRepo.save(appointment);
   }
 
   async getPatientAppointments(patientId: string): Promise<Appointment[]> {

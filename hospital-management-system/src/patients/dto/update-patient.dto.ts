@@ -1,27 +1,4 @@
-import { IsOptional, IsString, IsEmail, IsPhoneNumber } from 'class-validator';
+import { PartialType } from '@nestjs/mapped-types';
+import { RegisterPatinetDto } from '../../auth/dto/register.patient';
 
-export class UpdatePatientDto {
-  @IsOptional()
-  @IsString()
-  name?: string;
-
-  @IsOptional()
-  @IsEmail()
-  email?: string;
-
-  @IsOptional()
-  @IsPhoneNumber('IN') // Use appropriate locale, e.g., 'US', 'IN'
-  phone?: string;
-
-  @IsOptional()
-  @IsString()
-  address?: string;
-
-  @IsOptional()
-  @IsString()
-  age?: string;
-
-  @IsOptional()
-  @IsString()
-  gender?: string;
-}
+export class UpdatePatientDto extends PartialType(RegisterPatinetDto) {}

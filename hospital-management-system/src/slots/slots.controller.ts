@@ -17,12 +17,12 @@ export class SlotsController {
   }
 
   @Get('doctor/:id')
-  getSlotsByDoctor(@Param('id') doctorId: number) {
+  getSlotsByDoctor(@Param('id') doctorId: string) {
     return this.slotsService.findAvailableSlotsByDoctor(doctorId);
   }
 
   @Patch(':id/unavailable')
-  markUnavailable(@Param('id') id: number) {
+  markUnavailable(@Param('id') id: string) {
     return this.slotsService.markUnavailable(id);
   }
 }

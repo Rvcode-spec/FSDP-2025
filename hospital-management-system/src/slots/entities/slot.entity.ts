@@ -3,8 +3,8 @@ import { Doctor } from '../../doctors/entities/doctor.entity';
 
 @Entity()
 export class Slot {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column()
   date: string;
