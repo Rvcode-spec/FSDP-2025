@@ -13,16 +13,27 @@ StayFinder is a full-stack web application inspired by Airbnb that allows users 
 
 ---
 
-### 🔙 Backend:
-![Node.js](https://img.shields.io/badge/Backend-Node.js-Express-brightgreen)
-![Auth](https://img.shields.io/badge/Auth-Enabled-brightgreen)**Auth Routes**
-**POST /api/register — Register a new user.**
-**POST /api/login — Login existing user.**
+### 🔙 Backend
 
-- ![Listing] (https://img.shields.io/badge/Listing-Route-lawngreen) 🏘️ **Listing Routes**
-- **GET /api/listing — Get all listings.**
- **GET /api/listing/:id — Get listing details by ID.**
-  **POST /api/listing — Create new listing (host only).**
+![Backend](https://img.shields.io/badge/Backend-Node.js%20%7C%20Express-brightgreen)
+![Auth](https://img.shields.io/badge/Auth-Enabled-brightgreen)
 
-  - ![Booking](https://img.shields.io/badge/Booking-Route-purple)📆 **Booking Route**
-  - `POST /api/booking` — Create a new booking.
+#### 🔐 **Auth Routes**
+- **`POST /api/register`** — Register a new user.  
+- **`POST /api/login`** — Login existing user.
+
+---
+
+![Listing](https://img.shields.io/badge/Listing-Routes-lawngreen)
+
+#### 🏘️ **Listing Routes**
+- **`GET /api/listing`** — Get all listings.  
+- **`GET /api/listing/:id`** — Get listing details by ID.  
+- **`POST /api/listing`** — Create new listing (host only).
+
+---
+
+![Booking](https://img.shields.io/badge/Booking-Route-purple)
+
+#### 📆 **Booking Route**
+- **`POST /api/booking`** — Create a new booking.
