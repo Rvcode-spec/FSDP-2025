@@ -10,22 +10,22 @@
 - Role-based access control (Admin, Instructor, Student)
 - Login/Signup and protected route handling
 
-### ![Student-Management](https://img.shields.io/badge/Student%20Management-skyblue)🧑‍🎓 Student Management
+### ![Student-Management](https://img.shields.io/badge/Student-Management-skyblue)🧑‍🎓 Student Management
 - Add/edit student profiles
 - Monitor progress, course enrollments, and certifications
 - Manage student status (active/inactive)
 
-### [Instructor-Management](https://img.shields.io/badge/Instructor%20Management-olive)👨‍🏫 Instructor Management
+### ![Instructor-Management](https://img.shields.io/badge/Instructor-Management-olive)👨‍🏫 Instructor Management
 - Create and update instructor profiles
 - Assign courses and track performance
 - Instructor dashboard with analytics
 
-### [Course Management](https://img.shields.io/badge/Course%20Management-indigo) 📦 Course Management
+### ![Course Management](https://img.shields.io/badge/Course-Management-indigo) 📦 Course Management
 - Add, edit, and delete courses
 - Upload resources, videos, and quizzes
 - Categorize courses (Tech, Design, Business, etc.)
 
-### [Admin Dashboard](https://img.shields.io/badge/%20Admin%20Dashboard-blueviolet) 📊 Admin Dashboard
+### ![Admin Dashboard](https://img.shields.io/badge/%20Admin-Dashboard-blueviolet) 📊 Admin Dashboard
 - Visual charts and statistics for revenue, enrollment, activity
 - CRUD operations for all entities
 - Email notifications and status alerts
@@ -41,8 +41,8 @@
 ### Backend
 - ![Node.js](https://img.shields.io/badge/Backend-Node.js-brightgreen)  **Node.js** + **Express.js**
 - ![MongoDB](https://img.shields.io/badge/%20%20Database-MongoDB-greenyellow)**MongoDB** + **Mongoose**
-- ![JWT-Bcrypt](https://img.shields.io/badge/%20%20JWT-Bcrypt-navy)  **JWT**, **Bcrypt**, **Multer**, **Cloudinary**
--![Nodemailer](https://img.shields.io/badge/%20%20Nodemailer-slategray%09) **Nodemailer** for email notifications
+- ![JWT-Bcrypt](https://img.shields.io/badge/%20%20JWT-Bcrypt-navy)  **JWT**, **Bcrypt**, **Multer** , **Cloudinary** 
+- ![Nodemailer](https://img.shields.io/badge/%20%20Nodemailer-dimgray%09) **Nodemailer** for email notifications
 
 ---
 
