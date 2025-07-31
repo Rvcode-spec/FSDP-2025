@@ -49,5 +49,5 @@ cd CodeYaan-Admin-Panel
 npm install
 
 # Backend
-cd ../backend
+cd ../server
 npm install
