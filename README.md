@@ -46,9 +46,9 @@
 
 |  # | 🗂 Project Name                | 🔧 Description                            | 🕒 Last Updated | 🧑‍💻 Language/Stack        |
 | -: | ------------------------------ | ----------------------------------------- | --------------- | ------------------------- |
-|  1 | **[CodeYaan (Codesarthi-Academy)**         | API for product & course management       | 2 weeks ago     | Node.js, Next.js|](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/Codesarthi-Academy/CodeYaan-Admin-Panel)**
-|  2 | **EmailService Mock API**      | Mock Gmail-like email sending system      | 2 weeks ago     | NestJs |
-|  3 | **StayFinder**                 | Airbnb-inspired full-stack app for property bookings.    | 28 days ago     | Node.js,MongoDB, React.js+vite.js  |
+|  1 | **Codesarthi-Academy**         | API for product & course management       | 2 weeks ago     | Node.js, Next.js|](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/Codesarthi-Academy/CodeYaan-Admin-Panel)**
+|  2 | **Pearl-Thoughts**      | Mock Gmail-like email sending system      | 2 weeks ago     | NestJs |
+|  3 | **The Glen**                 | Airbnb-inspired full-stack app for property bookings.    | 28 days ago     | Node.js,MongoDB, React.js+vite.js  |
 |  4 | **Hospital Management System** | RESTful backend for hospital system       | last week       | NestJS PostgreSQL |
 
 
