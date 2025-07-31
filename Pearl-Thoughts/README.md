@@ -15,31 +15,52 @@ A robust backend system for managing healthcare appointments, featuring secure J
 ---
 
 ## 📝 Features
-- ![Auth](https://img.shields.io/badge/Auth-Enabled-brightgreen) **🔐 Authentication**
-**1.JWT-based secure login and session handling**
-**2. Separate registration for doctors and patients**
-**3.Profile access and logout for both roles**
+### ![Auth](https://img.shields.io/badge/Auth-Enabled-brightgreen) 🔐 Authentication
+- JWT-based secure login and session handling  
+- Separate registration for doctors and patients  
+- Profile access and logout for both roles  
 
- ![Doctor-Management](https://img.shields.io/badge/Doctor-Management-darkgray) **🧑‍⚕️ Doctor Management**
-**Doctor profile creation and updates**
-**Access to patient information**
+---
 
+### ![Doctor](https://img.shields.io/badge/Doctor--Management-Active-blue) 🧑‍⚕️ Doctor Management
+- Doctor profile creation and updates  
+- Access to patient information  
 
-**👤 Patient Management**
-**Patient profile creation and updates**
-**View own appointments and history**
-📅 Slot Management
-**Doctors can create available time slots**
-**Mark slots as unavailable when needed**
-**Filter slots by doctor**
-**📋 Appointment Management**
-**Patients can book appointments using available slots**
-**Options to cancel or reschedule appointments**
-**Admin view of all appointments**
+---
 
-**🛡 Role-Based Access Control**
-**Guards and decorators used to protect sensitive routes**
-**Role-specific permissions (doctor/patient)**
+### ![Patient](https://img.shields.io/badge/Patient--Management-Enabled-orange) 👤 Patient Management
+- Patient profile creation and updates  
+- View personal appointments and history  
+
+---
+
+### ![Slots](https://img.shields.io/badge/Slot--System-Active-yellow) 📅 Slot Management
+- Doctors can create and manage available time slots  
+- Mark slots as unavailable when needed  
+- Filter slots by doctor  
+
+---
+
+### ![Appointments](https://img.shields.io/badge/Appointments-Full%20Control-red) 📋 Appointment Management
+- Patients can book appointments from available slots  
+- Cancel or reschedule appointments as needed  
+- Admin view of all appointments  
+
+---
+
+### ![Access](https://img.shields.io/badge/Access-Control-important) 🛡 Role-Based Access Control
+- Guards and decorators to secure protected routes  
+- Role-specific permissions for doctors and patients  
+
+---
+
+### ⚙️ Additional Features
+- PostgreSQL + TypeORM for fast, scalable data handling  
+- `.env`-based secure environment configuration  
+- API testing via Postman  
+- Database management using pgAdmin  
+
+---
 
 
 **⚙️ Additional Features**
