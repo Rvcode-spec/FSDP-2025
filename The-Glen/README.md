@@ -61,17 +61,17 @@ This project was created as an internship assignment to gain hands-on experience
 git clone --filter=blob:none --no-checkout git@github.com:Rvcode-spec/Full-Stack-Solution-2025.git
 cd Full-Stack-Solution-2025
 git sparse-checkout init --cone
-git sparse-checkout set The Glen
+git sparse-checkout set The-Glen
 git checkout
 
 #💻 Frontend Setup
-cd The Glen
+cd The-Glen
 cd ./StayFinder/frontend
 npm install         # Install frontend dependencies
 npm run dev         # Start Vite development server
 
 # 📦 Backend Setup
-cd The Glen
+cd The-Glen
 cd ./StayFinder/backend
 npm install         # Install backend dependencies
 node seed/seed.js   # Seed initial property data

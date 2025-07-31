@@ -48,9 +48,9 @@
 
 |  # | 🗂 Project Name                | 🔧 Description                             | 🧑‍💻 Language/Stack                      | Deploy Link                    |
 | -: | ------------------------------ | ------------------------------------------ | --------------------------------------- |--------------------------------- |
-|  1 | [**CodeYaan-Academy**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/Codesarthi-Academy) | REST APIs for student, product, and course management | Next.js, Node.js                       |
+|  1 | [**CodeYaan-Academy**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/CodeYaan-Academy) | REST APIs for student, product, and course management | Next.js, Node.js                       |
 |  2 | [**Pearl-Thoughts**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/Pearl-Thoughts) | Secure backend for hospital appointments with auth, slots, and booking. | NestJS, PostgreSQL                     |
-|  3 | [**The Glen**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/The%20Glen) | Airbnb-style property booking platform     | Node.js, MongoDB, React.js, Vite.js    |  
+|  3 | [**The Glen**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/The-Glen) | Airbnb-style property booking platform     | Node.js, MongoDB, React.js, Vite.js    |  
 
 
 
