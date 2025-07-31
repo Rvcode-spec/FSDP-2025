@@ -47,7 +47,7 @@
 
 |  # | 🗂 Project Name                | 🔧 Description                             | 🧑‍💻 Language/Stack                      |
 | -: | ------------------------------ | ------------------------------------------ | --------------------------------------- |
-|  1 | [**Codesarthi-Academy**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/Codesarthi-Academy) | REST APIs for student, product, and course management | Next.js, Node.js                       |
+|  1 | [**CS-Academy**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/Codesarthi-Academy) | REST APIs for student, product, and course management | Next.js, Node.js                       |
 |  2 | [**Pearl-Thoughts**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/Pearl-Thoughts) | Gmail-style mailer & hospital backend API | NestJS, PostgreSQL                     |
 |  3 | [**The Glen**](https://github.com/Rvcode-spec/Full-Stack-Solution-2025/tree/master/The%20Glen) | Airbnb-style property booking platform     | Node.js, MongoDB, React.js, Vite.js    |
 
@@ -56,9 +56,9 @@
 ## ▶️ Loom Videos
 |  # | 🗂 Project Name         | 🔧 Loom Video Link                                   
 |:-:|-------------------------|--------------------------------------------------|
-| 1 | **Codesarthi-Academy**  |  [**Video-1**](https://www.loom.com/share/12c6f2ea96114797b3d5991983c2cf0c)   | 
-| 2 | **Pearl-Thoughts**      |  [**Video-1**](https://www.loom.com/share/12c6f2ea96114797b3d5991983c2cf0c)   | 
-| 3 | **The Glen**            |  [**Video-1**](https://www.loom.com/share/12c6f2ea96114797b3d5991983c2cf0c)   | 
+| 1 | **Codesarthi-Academy**  |   | 
+| 2 | **Pearl-Thoughts**      |     | 
+| 3 | **The Glen**            |    | 
 
 
 ## 👨‍💻 Author
