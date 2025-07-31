@@ -15,7 +15,7 @@
 - Monitor progress, course enrollments, and certifications
 - Manage student status (active/inactive)
 
-### [Instructor-Management](https://img.shields.io/badge/Instructor%20Management-olive)  👨‍🏫 Instructor Management
+### [Instructor-Management](https://img.shields.io/badge/Instructor%20Management-olive)👨‍🏫 Instructor Management
 - Create and update instructor profiles
 - Assign courses and track performance
 - Instructor dashboard with analytics
@@ -36,15 +36,13 @@
 
 ### Frontend
 - ![Next.Js](https://img.shields.io/badge/Frontend-NextJS-red)
--![Chart.js](https://img.shields.io/badge/%20%20ChartJS%20-darkorchid)
-- **Chart.js**, **Framer Motion**
+-![Chart.js](https://img.shields.io/badge/%20%20ChartJS%20-darkorchid) **Chart.js**, **Framer Motion**
 
 ### Backend
 - ![Node.js](https://img.shields.io/badge/Backend-Node.js-brightgreen)  **Node.js** + **Express.js**
 - ![MongoDB](https://img.shields.io/badge/%20%20Database-MongoDB-greenyellow)**MongoDB** + **Mongoose**
 - ![JWT-Bcrypt](https://img.shields.io/badge/%20%20JWT-Bcrypt-navy)  **JWT**, **Bcrypt**, **Multer**, **Cloudinary**
--![Nodemailer](https://img.shields.io/badge/%20%20Nodemailer-slategray%09
-) **Nodemailer** for email notifications
+-![Nodemailer](https://img.shields.io/badge/%20%20Nodemailer-slategray%09) **Nodemailer** for email notifications
 
 ---
 
