@@ -1,4 +1,4 @@
-# 🚀 CodeYaan-Academy Admin Panel
+# 🚀 CodeYaan-Academy
 
 
 ---
@@ -36,7 +36,7 @@
 
 ### Frontend
 - ![Next.Js](https://img.shields.io/badge/Frontend-NextJS-red)
--![Chart.js](https://img.shields.io/badge/%20%20ChartJS%20-darkorchid) **Chart.js**, **Framer Motion**
+- ![Chart.js](https://img.shields.io/badge/%20%20ChartJS%20-darkorchid) **Chart.js**, **Framer Motion**
 
 ### Backend
 - ![Node.js](https://img.shields.io/badge/Backend-Node.js-brightgreen)  **Node.js** + **Express.js**
