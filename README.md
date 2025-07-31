@@ -9,6 +9,7 @@
 - [💻 Tech Stack](#-tech-stack)
 - [📝 Features](#-features)
 - [👨‍💻 Author](#-author)
+- [🧠 Loom Videos](#-project-list)
 - [📜 License](#-license)
 - [🧠 Project List](#-project-list)
 
@@ -52,6 +53,12 @@
 
 
 
+## ▶️ Loom Videos
+|  # | 🗂 Project Name         | 🔧 Loom Video Link                                   
+|:-:|-------------------------|--------------------------------------------------|
+| 1 | **Codesarthi-Academy**  |  [**Video-1**](https://www.loom.com/share/12c6f2ea96114797b3d5991983c2cf0c)   | 
+| 2 | **Pearl-Thoughts**      |  [**Video-1**](https://www.loom.com/share/12c6f2ea96114797b3d5991983c2cf0c)   | 
+| 3 | **The Glen**            |  [**Video-1**](https://www.loom.com/share/12c6f2ea96114797b3d5991983c2cf0c)   | 
 
 
 ## 👨‍💻 Author
