@@ -64,6 +64,11 @@ A robust backend system for managing healthcare appointments, featuring secure J
 
 
 **⚙️ Additional Features**
+- PostgreSQL + TypeORM for fast, scalable data handling  
+- `.env`-based secure environment configuration  
+- API testing via Postman  
+- Database management using pgAdmin  
+
 ```bash
 # Install dependencies
 # Start PostgreSQL if needed
