@@ -6,8 +6,8 @@ A robust backend system for managing healthcare appointments, featuring secure J
 ## 💻 Tech Stack
 
 - ![NestJS](https://img.shields.io/badge/Backend-NestJS-red)
-- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-darkviolet)
-- ![TypeORM](https://img.shields.io/badge/TypeORM-chartreuse)
+- ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-darkviolet)
+- ![TypeORM](https://img.shields.io/badge/TypeScript-TypeORM-chartreuse)
 - ![JWT](https://img.shields.io/badge/JWT-cyan)
 - ![class-validator](https://img.shields.io/badge/class-validator-sandybrown)
 - ![@nestjs/config](https://img.shields.io/badge/%40nestjs%2Fconfig-darkgoldenrod)
@@ -28,7 +28,7 @@ A robust backend system for managing healthcare appointments, featuring secure J
 
 ---
 
-### ![Patient](https://img.shields.io/badge/Patient--Management-Enabled-orange) 👤 Patient Management
+### ![Patient](https://img.shields.io/badge/Patient--Management-Active-orange) 👤 Patient Management
 - Patient profile creation and updates  
 - View personal appointments and history  
 
