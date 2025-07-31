@@ -42,16 +42,31 @@ StayFinder is a full-stack web application inspired by Airbnb that allows users 
   
 🚀 Getting Started
 ---
-💻 Frontend Setup
+💻 Frontend Setup (React + Vite)
+# Navigate to frontend directory
 cd frontend
-npm install          # Install dependencies
-npm run dev          # Start Vite dev server
----
 
-📦 Backend Setup
+# Install frontend dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+----
+
+📦 Backend Setup (Node.js + Express)
+
+# Navigate to backend directory
 cd backend
-npm install          # Install dependencies
-node seed/seed.js    # Run seed script to populate DB
-nodemon              # Start development server
+
+# Install backend dependencies
+npm install
+
+# Seed the database with initial data
+node seed/seed.js
+
+# Start the backend server with live reload
+nodemon
+
 
 
